@@ -24,7 +24,7 @@ pipeline {
          steps {
              script {
                 sh "aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 377992282240.dkr.ecr.ap-south-1.amazonaws.com/cicd-maven"
-                sh "docker push 377992282240.dkr.ecr.ap-south-1.amazonaws.com/cicd-maven"
+                sh "docker push 377992282240.dkr.ecr.ap-south-1.amazonaws.com/cicd-maven:latest"
                  
              }
            }   
